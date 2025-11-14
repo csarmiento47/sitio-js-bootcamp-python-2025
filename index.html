@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Estilos propios debajo de bootstrap-->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+
+    <script>
+        console.log("Hola mundo!!!!");
+
+
+        function mostrarFecha() {
+            document.getElementById('fecha').innerHTML = new Date();
+            console.log(new Date());
+        }
+    </script>
+
+    <title>Sitio JS | Home</title>
+</head>
+
+<body onload="mostrarFechaActualizable(); limpiar(); indicadoresEconomicos();">
+    <header class="container-fluid text-center bg-dark text-white py-4">
+        <h1 class="display-5">Aprendiendo Javascript</h1>
+        <p id="fecha"></p>
+        <button class="btn btn-outline-primary" onclick="mostrarFecha();">Presioname!!!!</button>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jquery.html">Jquery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="countries.html">Countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="randomuserme.html">RandomUserMe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pokeapi.html">PokeApi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container py-4">
+        <div class="row py-4">
+            <h2>Modificar contenidos de los elementos HTML</h2>
+            <div class="col">
+                <button class="btn btn-outline-primary"
+                    onclick="document.getElementById('parrafo01').innerHTML='Hola mundo!!!'">Presioname!!!!</button>
+            </div>
+            <div class="col">
+                <p id="parrafo01">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis architecto provident laudantium
+                    culpa laborum ut perspiciatis magnam deleniti repudiandae odit.
+                </p>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-3">
+                <button class="btn btn-outline-primary"
+                    onclick="document.getElementById('parrafo02').style.display='none'">Ocultar Texto</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-outline-secondary"
+                    onclick="document.getElementById('parrafo02').style.display='block'">Mostrar Texto</button>
+            </div>
+            <div class="col-6">
+                <p id="parrafo02">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut repellendus enim atque ipsa esse
+                    dignissimos cum itaque et ullam sint!
+                </p>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-4">
+                <button onclick="document.getElementById('ampolleta').src='assets/img/pic_bulbon.gif'"
+                    class="btn btn-outline-warning">Encender</button>
+            </div>
+            <div class="col-4">
+                <img id="ampolleta" onmouseenter="document.getElementById('ampolleta').src='assets/img/pic_bulbon.gif'"
+                    onmouseleave="document.getElementById('ampolleta').src='assets/img/pic_bulboff.gif'"
+                    src="assets/img/pic_bulboff.gif" alt="">
+            </div>
+            <div class="col-4">
+                <button onclick="document.getElementById('ampolleta').src='assets/img/pic_bulboff.gif'"
+                    class="btn btn-outline-secondary">Apagar</button>
+            </div>
+        </div>
+
+        <!--Minicalculadora-->
+        <div class="row py-4">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header text-center text-primary">
+                        <h2 class="card-title">Minicalculadora</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control text-center" id="num1" name="num1" value="0">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control text-center" id="num2" name="num2" value="0">
+                            </div>
+                        </div>
+                        <div class="row my-3 text-center">
+                            <h5 class="text-primary fw-bold" id="resultado"></h5>
+                            <h5 class="text-danger fw-bold" id="error"></h5>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <div class="btn-group">
+                            <button onclick="sumar();" class="btn btn-outline-primary" type="button">
+                                <i class="fa-solid fa-plus fa-2x"></i>
+                            </button>
+                            <button onclick="restar();" class="btn btn-outline-primary" type="button">
+                                <i class="fa-solid fa-minus fa-2x"></i>
+                            </button>
+                            <button onclick="multiplicar();" class="btn btn-outline-primary" type="button">
+                                <i class="fa-solid fa-times fa-2x"></i>
+                            </button>
+                            <button onclick="dividir();" class="btn btn-outline-primary" type="button">
+                                <i class="fa-solid fa-divide fa-2x"></i>
+                            </button>
+                            <button onclick="limpiar();" class="btn btn-outline-primary" type="button">
+                                <i class="fa-solid fa-c fa-2x"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fin Minicalculadora-->
+
+        <!--Indicadores económicos-->
+        <div class="row py-4">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>INDICADOR</th>
+                            <th class="text-center">UNIDAD DE MEDIDA</th>
+                            <th class="text-end">VALOR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="indicador-uf" class="fw-bold"></td>
+                            <td id="unidad-uf" class="text-center"></td>
+                            <td id="valor-uf" class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td id="indicador-dolar" class="fw-bold"></td>
+                            <td id="unidad-dolar" class="text-center"></td>
+                            <td id="valor-dolar" class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td id="indicador-euro" class="fw-bold"></td>
+                            <td id="unidad-euro" class="text-center"></td>
+                            <td id="valor-euro" class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td id="indicador-utm" class="fw-bold"></td>
+                            <td id="unidad-utm" class="text-center"></td>
+                            <td id="valor-utm" class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td id="indicador-ipc" class="fw-bold"></td>
+                            <td id="unidad-ipc" class="text-center"></td>
+                            <td id="valor-ipc" class="text-end"></td>
+                        </tr>
+                    </tbody>
+            </div>
+        </div>
+    </div>
+    <!--Fin Indicadores económicos-->
+
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!--Javascript propios siempre debajo de los bootstrap-->
+    <script src="assets/js/index.js"></script>
+
+    <script src="assets/js/calculadora.js"></script>
+
+    <script src="assets/js/mindicador-cl.js"></script>
+</body>
+
+</html>

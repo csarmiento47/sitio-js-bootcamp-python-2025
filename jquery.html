@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Estilos propios debajo de bootstrap-->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+
+
+    <title>Sitio JS | Jquery</title>
+</head>
+
+<body>
+    <header class="container-fluid text-center bg-dark text-white py-4">
+        <h1 class="display-5">Introducción a Jquery<br>una biblioteca de Javascript</h1>
+        <p class="" id="fecha_actualizable"></p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jquery.html">Jquery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="countries.html">Countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="randomuserme.html">RandomUserMe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pokeapi.html">PokeApi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <div class="row py-4">
+            <p id="parrafo01">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, ad omnis asperiores similique
+                accusantium, reprehenderit exercitationem numquam porro officiis facilis dolore. Modi, ducimus provident
+                quis dolores eius architecto facere minus a, laborum vitae cumque explicabo rem incidunt velit nisi aut!
+                Unde nesciunt corporis obcaecati non! Maxime deserunt culpa error, accusantium ex sint impedit ipsam
+                voluptas omnis officiis perferendis nam pariatur eligendi corporis? Eligendi quia illum cum iste sit qui
+                dolor deserunt provident ratione eius, nisi suscipit aliquid, id pariatur! Suscipit libero quam voluptas
+                laborum nisi culpa officiis repudiandae ad obcaecati quas sed est voluptatem asperiores maiores repellat
+                similique, minus reiciendis!
+            </p>
+        </div>
+        <div class="row py-4">
+            <p id="parrafo02">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, ad omnis asperiores similique
+                accusantium, reprehenderit exercitationem numquam porro officiis facilis dolore. Modi, ducimus provident
+                quis dolores eius architecto facere minus a, laborum vitae cumque explicabo rem incidunt velit nisi aut!
+                Unde nesciunt corporis obcaecati non! Maxime deserunt culpa error, accusantium ex sint impedit ipsam
+                voluptas omnis officiis perferendis nam pariatur eligendi corporis? Eligendi quia illum cum iste sit qui
+                dolor deserunt provident ratione eius, nisi suscipit aliquid, id pariatur! Suscipit libero quam voluptas
+                laborum nisi culpa officiis repudiandae ad obcaecati quas sed est voluptatem asperiores maiores repellat
+                similique, minus reiciendis!
+            </p>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6 mx-auto">
+                <img id="ampolleta" src="assets/img/pic_bulboff.gif" alt="Luz apagada">
+            </div>
+        </div>
+        <div class="row py-4">
+            <p id="parrafo03">Acerca tu mouse a este párrafo</p>
+        </div>
+        <div class="row py-4">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="frase_ingresada" name="frase_ingresada" placeholder="Ingresa tu frase del día y luego presiona el botón">
+            </div>
+            <div class="mb-3">
+                <button type="button" id="button01" class="btn btn-outline-primary">Presioname!!!</button>
+            </div>
+            <p id="frase"></p>
+        </div>
+        <hr>
+        <h2>Manejo de funciones de Jquery</h2>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo función CLICK</h3>
+                <button type="button" id="button02" class="btn btn-outline-primary">Presioname!!!</button>
+            </div>
+            <div class="col-md-6">
+                <p>Resolución de tu pantalla</p>
+                <p id="parrafo04"></p>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo función '.hide' y '.show'</h3>
+                <button class="btn btn-outline-primary" id="button03" type="button">Presioname para ocultar el texto</button>
+                <button class="btn btn-outline-secondary" id="button04" type="button">Presioname para mostrar el texto</button>
+            </div>
+            <div class="col-md-6">
+                <p id="parrafo05">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus amet omnis assumenda, a temporibus quod animi nobis ea ad neque ratione pariatur in eius sed, reiciendis inventore quae commodi. Officia.</p>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col md-6">
+                <h3>Manejo función '.toggle'</h3>
+                <button class="btn btn-outline-secondary" id="button05" type="button">Presioname para togglear una imagen</button>
+            </div>
+            <div class="col md-6">
+                <img id="ampolleta02" src="assets/img/pic_bulboff.gif" alt="Luz apagada">
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h2>Manejo función '.slideDown'</h2>
+                <button class="btn btn-outline-secondary" id="button06" type="button">Presioname</button>
+            </div>
+            <div class="col-md-6">
+                <img class="img-oculta" id="ampolleta03" src="assets/img/pic_bulboff.gif" alt="Luz apagada">
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h2>Manejo función '.slideUp'</h2>
+                <button class="btn btn-outline-secondary" id="button07" type="button">Presioname</button>
+            </div>
+            <div class="col-md-6">
+                <img id="ampolleta04" src="assets/img/pic_bulboff.gif" alt="Luz apagada">
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h2>Manejo función '.slideToggle'</h2>
+                <button class="btn btn-outline-secondary" id="button08" type="button">Presioname</button>
+            </div>
+            <div class="col-md-6">
+                <ul id="lista_paises">
+                    <li>Chile</li>
+                    <li>Argentina</li>
+                    <li>Bolivia</li>
+                    <li>Perú</li>
+                    <li>Colombia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo función '.before'</h3>
+                <button class="btn btn-outline-primary" id="button09" type="button">Presioname</button>
+            </div>
+            <div class="col-md-6">
+                <p id="parrafo06">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, velit.</p>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo función '.after'</h3>
+                <button class="btn btn-outline-primary" id="button10" type="button">Presioname</button>
+            </div>
+            <div class="col-md-6">
+                <p id="parrafo07">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, velit.</p>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo función '.append'</h3>
+                <button class="btn btn-outline-primary" id="button11" type="button">Presioname</button>
+            </div>
+            <div class="col-md-6">
+                <ul id="parrafo08">
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <h3>Manejo función '.html'</h3>
+                <button class="btn btn-outline-primary" id="button12" type="button">Presioname</button>
+            </div>
+            <div class="col-md-6">
+                <p id="parrafo09">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, velit.</p>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+        integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/jquery.js"></script>
+</body>
+
+</html>

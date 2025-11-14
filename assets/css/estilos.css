@@ -1,0 +1,30 @@
+body {
+    font-family: "Saira", sans-serif;
+}
+
+.img-oculta {
+    display: none;
+}
+
+.img-country {
+    width: 100px;
+}
+
+.img-pokemon {
+    width: 100px;
+}
+
+.img-pokemon-card {
+    width: 200px;
+}
+
+.sticky-top-pokemon {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    z-index: 1020;
+}
+
+.img-rounded {
+    border-radius: 100%;
+}
