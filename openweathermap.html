@@ -21,14 +21,14 @@
     <!--Estilos propios debajo de bootstrap-->
     <link rel="stylesheet" href="assets/css/estilos.css">
 
-
-    <title>Sitio JS | Countries API</title>
+    <title>Sitio JS | OpenWeatherMap API</title>
 </head>
 
-<body>
+<body onload="mostrarFechaActualizable();">
     <header class="container-fluid text-center bg-dark text-white py-4">
-        <h1 class="display-5">Manejo API RestCountries</h1>
-        <p class="" id="fecha_actualizable"></p>
+        <h1 class="display-4">Aprendiendo Javascript</h1>
+        <h2 class="display-5">Manejo API OpenWeatherMap</h2>
+        <p id="fecha"></p>
     </header>
 
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -63,37 +63,37 @@
         </div>
     </nav>
 
+
     <main class="container my-4">
         <div class="row">
-            <div class="mb-3">
-                <input type="text" class="form-control" id="filtro" placeholder="Ingrese texto para filtrar">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="input-group">
+                            <input type="text" id="ciudad" name="ciudad" class="form-control"
+                                placeholder="Ingrese ciudad a buscar">
+                            <button type="button" class="btn btn-outline-dark" id="buscar">Buscar</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div id="info-clima"></div>
+                        </div>
+                        <div class="row text-center">
+                            <div id="img-clima"></div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <p class="copyright text-muted">Copyright &copy;2025 <a href="https://openweathermap.org/"
+                                target="_blank">OpenWeatherMap</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="d-none d-md-block" src="http://picsum.photos/600/600" alt="Imagen Aleatoria">
             </div>
         </div>
-        <div class="row">
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead class="table-dark text-center">
-                        <tr>
-                            <th>País</th>
-                            <th>Capital</th>
-                            <th>Continente</th>
-                            <th>Moneda / Símbolo</th>
-                            <th>Bandera</th>
-                            <th>Escudo de Armas</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table_body">
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
     </main>
-
-    <footer>
-
-    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
         integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
@@ -105,9 +105,13 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <script src="assets/js/jquery.js"></script>
 
-    <script src="assets/js/countries.js"></script>
+
+    <!--Javascript propios siempre debajo de los bootstrap-->
+    <script src="assets/js/index.js"></script>
+
+    <script src="assets/js/openweathermap.js"></script>
+
 </body>
 
 </html>
